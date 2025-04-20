@@ -59,7 +59,7 @@ const Header = () => {
   ];
 
   return (
-    <section className="fixed flex flex-col w-full shadow-md bg-[#0f0f0f] text-white">
+    <section className="fixed z-50 flex flex-col w-full shadow-md bg-[#0f0f0f] text-white">
       <nav className="container mx-auto flex justify-between items-center max-h-[50px] py-[11px]">
         <div className="flex gap-[36px] ">
           {navItems.map((item, x) => (
