@@ -1,3 +1,4 @@
+import EsimSection from "@/components/eSimSection";
 import Hero from "@/components/hero";
 import TariffSlider from "@/components/tariffSlider";
 import React from "react";
@@ -7,6 +8,7 @@ export default function HomePage() {
     <>
     <Hero/>
     <TariffSlider/>
+    <EsimSection/>
     </>
   );
 }
