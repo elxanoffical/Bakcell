@@ -1,3 +1,4 @@
+// components/TariffSlider.jsx
 "use client";
 
 import React from "react";
@@ -97,27 +98,31 @@ const tariffs = [
 export default function TariffSlider() {
   return (
     <section className="pt-16 mb-4 container mx-auto">
-      <div>
-        <h2 className="text-3xl font-extrabold mb-8 tracking-wider">Ən populyar təkliflərimiz</h2>
+      <h2 className="text-3xl mx-5 md:mx-0 font-extrabold mb-8 tracking-wider">
+        Ən populyar təkliflərimiz
+      </h2>
 
-        <Swiper
-          modules={[Autoplay]}
-          slidesPerView={3}
-          spaceBetween={24}
-          loop={true}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
-        >
-          {tariffs.map((item) => (
-            <SwiperSlide key={item.title}>
-              <TariffCard
-                {...item}
-                onMore={() => console.log("More:", item.title)}
-                onSubscribe={() => console.log("Subscribe:", item.title)}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+      <Swiper
+        modules={[Autoplay]}
+        spaceBetween={24}
+        breakpoints={{
+          0: { slidesPerView: 1 },
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        loop={true}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+      >
+        {tariffs.map((item) => (
+          <SwiperSlide key={item.title}>
+            <TariffCard
+              {...item}
+              onMore={() => console.log("More:", item.title)}
+              onSubscribe={() => console.log("Subscribe:", item.title)}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 }
