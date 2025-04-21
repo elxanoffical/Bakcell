@@ -11,7 +11,10 @@ export default function TariffCard({
 }) {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
-      <div className="bg-gradient-to-r from-red-400 to-red-500 rounded h-[180px] p-7 flex flex-col gap-3 text-white">
+      <div
+        className="bg-gradient-to-r from-red-400 to-red-500 
+       rounded h-[180px] p-7 flex flex-col gap-3 text-white"
+      >
         <h3 className="text-xl font-bol px-1 rounded tracking-wide">
           <span className="bg-black text-2xl font-bold px-2 rounded tracking-wide">
             {title}
@@ -35,7 +38,9 @@ export default function TariffCard({
           {features.map((item, index) => (
             <div key={index} className="flex items-center gap-2">
               {item.icon}
-              <span className="text-black text-md font-extrabold tracking-wide">{item.label}</span>
+              <span className="text-black text-md font-extrabold tracking-wide">
+                {item.label}
+              </span>
             </div>
           ))}
         </div>

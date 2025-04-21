@@ -109,8 +109,8 @@ const Header = () => {
         </div>
       </nav>
 
-      <header className="bg-white border-t border-gray-200">
-        <div className="container mx-auto flex justify-between items-center py-5 px-4">
+      <header className="bg-white">
+        <div className="container mx-auto flex justify-between items-center py-4 px-4">
           <div className="flex items-center gap-6">
             <Image src={bakcellLogo} alt="Bakcell Logo" />
             {tarifItems.map((item, idx) => (
@@ -128,13 +128,7 @@ const Header = () => {
             </button>
 
             <button
-              className="
-              px-4 py-2  cursor-pointer
-              border border-black 
-              rounded-[8px] 
-              text-[15px] font-semibold
-             
-            "
+              className="px-3 py-2 text-black cursor-pointer border border-black rounded-[8px] text-[15px] font-semibold"
             >
               "Bakcell"-ə qoşul
             </button>
