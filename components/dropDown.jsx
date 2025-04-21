@@ -40,10 +40,7 @@ export default function Dropdown({ title, items, className = "" }) {
         pointer-events-none
         transition-all duration-200 group-hover:duration-500 ease-in-out
         group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto`
-                : "hidden"
-            }
-        
-    `}
+                : "hidden"}`}
       >
         {items?.map(({ href, label }) => (
           <Link
