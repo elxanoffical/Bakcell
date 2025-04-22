@@ -51,7 +51,7 @@ export default function FeatureCarousel() {
     >
       <div
         className=" container mx-auto
-            flex flex-col lg:flex-row items-end justify-end
+            flex flex-col lg:flex-row items-center justify-end lg:items-end
             lg:space-x-10 
           "
       >

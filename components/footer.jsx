@@ -1,27 +1,28 @@
-import Link from 'next/link';
+import Link from "next/link";
 import {
   FaInstagram,
   FaFacebookF,
   FaYoutube,
   FaTwitter,
   FaLinkedinIn,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className="bg-red-600 text-white">
       {/* Üst bölmə */}
       <div className="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 gap-8">
-
         {/* Abunə + Sosial */}
-        <div className="md:col-span-2 border w-[340px]">
-          <h4 className="text-4xl font-extrabold mb-2 pr-8">Xəbərlərimizə abunə ol</h4>
+        <div className="md:col-span-2 w-[340px]">
+          <h4 className="text-4xl font-extrabold mb-2 pr-8">
+            Xəbərlərimizə abunə ol
+          </h4>
           <p className="mb-4 font-medium">Yeniliklərdən məlumatlı ol</p>
           <form className="flex rounded-md relative">
             <input
               type="email"
               placeholder="E-poçt daxil et"
-              className="px-4 py-3 rounded-l-md  bg-white flex-1 text-gray-800 focus:outline-none placeholder:text-gray-800"
+              className="px-4 py-3 rounded-md  bg-white flex-1 text-gray-800 focus:outline-none placeholder:text-gray-800"
             />
             <button
               type="submit"
@@ -30,7 +31,7 @@ export default function Footer() {
               Abunə ol
             </button>
           </form>
-          <div className="flex items-center justify-between space-x-4 mt-12 text-3xl">
+          <div className="flex items-center justify-between space-x-4 mt-12 text-2xl">
             <a href="#" aria-label="Instagram" className="hover:opacity-80">
               <FaInstagram />
             </a>
@@ -138,7 +139,8 @@ export default function Footer() {
       <div className="border-t border-red-500">
         <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between text-sm">
           <p>
-            © Müəlliflik hüququ {new Date().getFullYear()} Bakcell MMC. Bütün hüquqlar qorunur.
+            © Müəlliflik hüququ {new Date().getFullYear()} Bakcell MMC. Bütün
+            hüquqlar qorunur.
           </p>
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
             <Link href="/monthly-fee" className="hover:underline">

@@ -136,7 +136,7 @@ export default function Header() {
       <div className="flex lg:hidden items-center justify-between bg-[#0f0f0f] px-4 py-3">
         <Image src={bakcellLogo} alt="Bakcell Logo" width={120} height={24} />
         <button onClick={() => setMobileOpen(true)}>
-          <MdMenu className="w-8 h-8 text-white" />
+          <MdMenu className="w-8 h-8 text-white cursor-pointer" />
         </button>
       </div>
 
@@ -158,9 +158,15 @@ export default function Header() {
             </div>
             <div className="flex items-center gap-2">
               <select className=" text-white">
-                <option className="text-black" value="az">AZ</option>
-                <option className="text-black" value="en">EN</option>
-                <option className="text-black" value="ru">RU</option>
+                <option className="text-black" value="az">
+                  AZ
+                </option>
+                <option className="text-black" value="en">
+                  EN
+                </option>
+                <option className="text-black" value="ru">
+                  RU
+                </option>
               </select>
               <button onClick={() => setMobileOpen(false)}>
                 <MdClose className="w-6 h-6 text-white" />
@@ -168,16 +174,18 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="p-4 border-b space-y-3">
-            <button className="w-full text-left px-4 py-2 border rounded font-semibold">
-              Daxıl ol
-            </button>
-            <button className="w-full text-left flex items-center gap-2 px-4 py-2 border rounded">
-              <MdApps className="w-6 h-6" /> Tətbiqlər
-            </button>
-            <div className="flex items-center justify-between px-4">
-              <MdOutlineLightMode className="w-6 h-6" />
-              <MdOutlineDarkMode className="w-6 h-6" />
+          <div className="p-4 border-b flex items-center justify-between space-y-3">
+            <div className="flex items-center gap-3">
+              <button className="w-fit text-left px-4 py-2 border rounded-md font-semibold">
+                Daxıl ol
+              </button>
+              <button className="w-fit text-left flex items-center gap-2 px-2 py-2 border rounded-md">
+                <MdApps className="w-6 h-6" />
+              </button>
+            </div>
+            <div className="flex items-center gap-1 border-gray-200 border p-[2px] rounded-md">
+              <MdOutlineLightMode className="w-8 h-8 rounded-md text-gray-500" />
+              <MdOutlineDarkMode className="w-8  h-8 rounded-md text-gray-500" />
             </div>
           </div>
 
@@ -194,20 +202,20 @@ export default function Header() {
 
           <div className="p-4 space-y-2">
             <Link
-              href="/join"
+              href="/"
               onClick={() => setMobileOpen(false)}
-              className="block px-4 py-2 bg-red-100 text-red-600 font-semibold rounded"
+              className="block px-4 py-2 bg-red-50 text-red-600 font-semibold rounded"
             >
               “Bakcell”-ə qoşul
             </Link>
             {tarifItems.map((item, idx) => (
-              <details key={idx} className="border rounded">
-                <summary className="px-4 py-3 font-semibold">
+              <details key={idx} className=" rounded bg-red-50">
+                <summary className="px-4 py-3 font-semibold cursor-pointer">
                   {item.title}
                 </summary>
-                {item.altMenu?.map((sub, j) => (
+                {item.altMenu?.map((sub, key) => (
                   <Link
-                    key={j}
+                    key={key}
                     href={sub.href}
                     onClick={() => setMobileOpen(false)}
                     className="block px-6 py-2 text-gray-700"
@@ -221,7 +229,7 @@ export default function Header() {
 
           <div className="p-4 border-t space-y-3">
             <div className="flex items-center gap-2">
-              <Image src={balans} alt="Balans" width={20} height={20} />
+              <Image className="text-black" src={balans} alt="Balans" width={20} height={20} />
               <span>Balans</span>
             </div>
             <div className="flex items-center gap-2">

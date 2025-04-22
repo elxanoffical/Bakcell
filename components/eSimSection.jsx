@@ -7,7 +7,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function EsimSection() {
   return (
-    <section className=" border my-20 px-5">
+    <section className=" my-20 px-5">
       <div className=" container mx-auto p-4 rounded-xl bg-red-100">
         <div className="relative flex h-[420px] overflow-hidden rounded-lg">
           <div

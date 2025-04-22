@@ -15,7 +15,7 @@ export default function TariffCard({
       {/* Üst blok */}
       <div
         className="
-        bg-gradient-to-r from-red-400 to-red-500
+        bg-red-500
         rounded-md
         h-[180px] sm:p-7
        p-5
