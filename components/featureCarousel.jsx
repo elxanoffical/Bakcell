@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
-// import phoneFrame from "@/app/assets/images/featuesCarousel/img1.webp";
 
 import slide1 from "@/app/assets/images/featuesCarousel/img1.webp";
 import slide2 from "@/app/assets/images/featuesCarousel/img2.webp";
@@ -56,7 +55,6 @@ export default function FeatureCarousel() {
             lg:space-x-10 
           "
       >
-        {/* Telefon/Kadraj */}
         <div
           className="
               relative flex-shrink-0 
@@ -76,7 +74,6 @@ export default function FeatureCarousel() {
           </div>
         </div>
 
-        {/* Mətn və naviqasiya */}
         <div
           className="
               flex-shrink-0
