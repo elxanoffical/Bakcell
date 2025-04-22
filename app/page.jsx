@@ -1,4 +1,5 @@
 import EsimSection from "@/components/eSimSection";
+import FeatureCarousel from "@/components/featureCarousel";
 import Hero from "@/components/hero";
 import MobileAppPromo from "@/components/mobilAppProma";
 import TariffSlider from "@/components/tariffSlider";
@@ -11,6 +12,7 @@ export default function HomePage() {
       <TariffSlider />
       <EsimSection />
       <MobileAppPromo />
+      <FeatureCarousel/>
     </>
   );
 }
